@@ -90,9 +90,11 @@ Watch test controller demo on YouTube - https://www.youtube.com/watch?v=JQwfiyl2
 * Raspberry Pi 4 (might well run on 3, but I did not test) (https://core-electronics.com.au/raspberry-pi-4-model-b-2gb.html)
 * Small fan (optional, in case your Pi overheats when running face detection)
 * Camera module with long cable 30+ cm (https://core-electronics.com.au/raspberry-pi-camera-board-v2-8-megapixels-38552.html)
-* Intel Neural Computing Stick 2 is you want to apply face detection of other NN (https://www.ebay.com.au/sch/i.html?_nkw=Intel+Movidius+Neural+Compute+Stick+2)
-* USB UART cable (https://www.ebay.com.au/sch/i.html?_nkw=USB+UART+Cable)
+* Intel Neural Computing Stick 2 if you want to apply face detection or other NN (https://www.ebay.com.au/sch/i.html?_nkw=Intel+Movidius+Neural+Compute+Stick+2)
+* USB to TTL UART cable (https://www.ebay.com.au/sch/i.html?_nkw=USB+UART+Cable)
 
+
+My final setup looks like that
 ![PI](https://github.com/EvgenyMuryshkin/qvr/blob/master/images/pi.png "PI")
 
 Most of the required packages already come with NOOBS disto, which I am using. 
@@ -167,7 +169,7 @@ That is about it, hope you have fun and learn new thing while doing this small e
 # Challenges
 
 ## Challenge 1
-Disable face detection to increase up frame rate.
+Disable face detection to increase frame rate.
 
 Replace polling of image with direct handling of mjpg to get smooth video stream from Raspberry Pi
 
@@ -194,7 +196,7 @@ Most of the issues can be found on Stack Overflow. Many of them related to missi
 | ------- | ---------|
 | No UART communications | Make sure that RXD-TXD pairs are connected property, try to make loopback (connect it to itself) to test it locally |
 | Pi server does not receive data on UART | If you don't have permission to serial port, it might just silently not work, no errors, no crashes, no data. One of provided solutions might work for you (https://lb.raspberrypi.org/forums/viewtopic.php?t=197823) |
-| No image from camera appears in Unity | **snn** server is not running in Pi - run server and check stream browser |
+| No image from camera appears in Unity | **snn** server is not running in Pi - run server and check stream in browser |
 | No image from camera appears in Unity | Make sure that you have correct IP address of Pi in component. Open Assets/AxisComponent.cs and edit Pi address if is not correct |
 
 
