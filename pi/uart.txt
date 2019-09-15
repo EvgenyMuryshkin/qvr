@@ -1,0 +1,21 @@
+dtoverlay -h uart2
+dtoverlay uart2
+raspi-gpio funcs
+/dev/ttyAMA1
+dtoverlay -a | grep uart
+
+ls -l /dev/ttyAMA0
+ls -l /dev/serial0
+sudo usermod -a -G dialout username
+sudo adduser pi tty
+
+messing with access rights
+https://lb.raspberrypi.org/forums/viewtopic.php?t=197823
+
+then
+reboot, toggle serial interface in config
+
+Cable:
+Green: TXD
+White: RXD
+
