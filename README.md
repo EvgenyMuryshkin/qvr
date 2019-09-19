@@ -58,7 +58,7 @@ Once you have all connected, you need to make sample design for FPGA.
 **FPGA part is built using components that already available as part of my toolkit. All required drivers are included in this tutorial, so no need to download anything in addition. Please refer to main toolkit page for more examples and drivers** 
 
 NOTE: example is using Verilog. VHDL is also supported with configuration change in quokka cli
-
+* Check out PC setup section for software installation
 * Clone this repo into some directory e.g. qvr
 * Open solution from **qvr\fpga\qvr.sln** in Visual Studio
 * Edit **qvr\verilog.json** configuration file and set your board clock rate in Hz
